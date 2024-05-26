@@ -1,7 +1,3 @@
-import { http } from "msw";
+import { autoRemarkQueriesHandlers } from "./auto-remark/queries";
 
-export const handlers = [
-  http.get("/posts", () => {
-    console.log('Captured a "GET /posts" request----------------');
-  }),
-];
+export const handlers = [...autoRemarkQueriesHandlers];
