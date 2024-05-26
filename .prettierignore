@@ -1,0 +1,8 @@
+.next
+next-env.d.ts
+public
+next.config.js
+README.md
+.nvmrc
+.vscode
+.idea
