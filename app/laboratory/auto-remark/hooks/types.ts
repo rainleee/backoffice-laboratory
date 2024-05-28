@@ -1,6 +1,6 @@
 import { MouseEventHandler } from "react";
 
-export interface userInfo {
+export interface UserInfo {
   id: number;
   status: string;
   link: string;
@@ -16,7 +16,7 @@ export type Predicate<T> = {
 
 export interface AutoRemarkResponse {
   data: {
-    user: userInfo[];
+    user: UserInfo[];
     count: {
       total: number;
       status: number;

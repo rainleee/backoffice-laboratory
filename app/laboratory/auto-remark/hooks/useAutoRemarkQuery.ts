@@ -6,8 +6,8 @@ export const useAutoRemarkQuery = () => {
 
       const studentNumbers: number[] = Array.from(
         new Set(
-          data.response.map((obj: any) => {
-            return (obj as any).userNo;
+          data.map((obj: any) => {
+            return obj.userNo;
           }),
         ),
       );
@@ -15,22 +15,34 @@ export const useAutoRemarkQuery = () => {
       return {
         studentNumbers,
         date: {
-          start: data.response[0].submitDate,
-          end: data.response[data.response.length - 1].submitDate,
+          start: data[0].submitDate,
+          end: data[data.length - 1].submitDate,
         },
         total: studentNumbers.length,
       };
     } catch (error) {
       console.error(error);
+      return {
+        studentNumbers: [],
+        date: {
+          start: "",
+          end: "",
+        },
+        total: 0,
+      };
     }
   };
 
   const getStudentLectureList = async (userNo: number) => {
     try {
-      console.log(userNo);
+      const res = await fetch(`getStudentLectureList/${userNo}`);
 
-      // const { data } = await fetch(`getStudentLectureList/${userNo}`);
-      // return { lecture_info: data.lecture_info ?? [] };
+      if (!res.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const data = await res.json();
+      return { lecture_info: data ?? [] };
     } catch (error) {
       console.error(error);
     }
