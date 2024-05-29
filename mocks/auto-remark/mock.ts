@@ -1,4 +1,4 @@
-export const LECTURE_DUMMY = [
+export const LECTURE_INFO = [
   [
     {
       tutoring_state: "FINISH",
@@ -33,7 +33,7 @@ export const LECTURE_DUMMY = [
   ],
 ];
 
-export const studentNumbers = [
+export const USER_INFO = [
   {
     submitDate: "2023-10-18 12:39:14",
     userNo: 562717,

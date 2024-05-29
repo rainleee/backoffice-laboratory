@@ -1,3 +1,3 @@
-import { autoRemarkQueriesHandlers } from "./auto-remark/queries";
+import { autoRemarkHandlers } from "./auto-remark";
 
-export const handlers = [...autoRemarkQueriesHandlers];
+export const handlers = [...autoRemarkHandlers];
