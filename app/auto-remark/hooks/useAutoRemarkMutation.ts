@@ -10,7 +10,7 @@ export const useAutoRemarkMutation = () => {
     type: AutoRemarkMutationType,
   ): Promise<UserInfo> => {
     try {
-      const { data, errors } = await writeRemark({
+      const { data } = await writeRemark({
         variables: {
           input: {
             userId,
@@ -22,7 +22,7 @@ export const useAutoRemarkMutation = () => {
       const userInfo = {
         id: userId,
         status: "✅",
-        link: `${userId}`,
+        link: `${userId}`, //TODO: change
         error: "",
       };
 
@@ -30,8 +30,7 @@ export const useAutoRemarkMutation = () => {
         return {
           ...userInfo,
           status: "❌",
-          error: `error code : `,
-          //   error: `error code : ${errors[0].message}`,
+          error: `error code : `, //TODO: change
         };
       }
 
@@ -43,7 +42,7 @@ export const useAutoRemarkMutation = () => {
       return {
         id: userId,
         status: "❌",
-        link: `${userId}`,
+        link: `${userId}`, //TODO: change
         error: `error code : 404 not found`,
       };
     }
