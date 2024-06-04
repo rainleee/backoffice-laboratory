@@ -85,11 +85,11 @@ export const AutoRemarkAction = ({ loading, handleClick }: ActionProps) => {
   return (
     <AlertDialog>
       <div className="flex items-center justify-end gap-2">
-        {process.env.NEXT_PUBLIC_MODE_DESC !== "production" && (
+        {/* {process.env.NEXT_PUBLIC_MODE_DESC !== "production" && (
           <Button onClick={handleClick} disabled={loading} value="dummy">
             특이사항 추가
           </Button>
-        )}
+        )} */}
         <AlertDialogTrigger asChild>
           <Button variant="outline" disabled={loading}>
             초기화
