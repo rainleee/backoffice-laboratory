@@ -26,10 +26,6 @@
   "rules": {
     "@typescript-eslint/no-explicit-any": "off",
 		"unused-imports/no-unused-imports": "warn",
-		"unused-imports/no-unused-vars": [
-			"warn",
-			{ "vars": "all", "vunused-imports/no-unused-varsarsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
-		],
     "react/prop-types": 0,
     "import/order": [
       "error",
