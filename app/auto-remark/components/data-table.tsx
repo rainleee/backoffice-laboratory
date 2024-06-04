@@ -7,8 +7,17 @@ import {
   useReactTable,
 } from "@tanstack/react-table";
 import { Loader2, SquareArrowOutUpRight } from "lucide-react";
-import Link from "next/link";
 
+import {
+  AlertDialog,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
 import {
   Table,
@@ -41,11 +50,7 @@ const columns: ColumnDef<UserInfo>[] = [
     cell: ({ row }) => {
       return (
         <div className="text-right font-medium">
-          <Button variant="outline" size="icon" asChild>
-            <Link href={row.original.link} target="_blank">
-              <SquareArrowOutUpRight />
-            </Link>
-          </Button>
+          <LinkAlertDialog />
         </div>
       );
     },
@@ -121,5 +126,30 @@ export const AutoRemarkDataTable = ({ data, isDirty, loading }: TableProps) => {
         </Table>
       </div>
     </div>
+  );
+};
+
+const LinkAlertDialog = () => {
+  return (
+    <AlertDialog>
+      <AlertDialogTrigger asChild>
+        <Button variant="outline" size="icon" asChild>
+          <SquareArrowOutUpRight />
+        </Button>
+      </AlertDialogTrigger>
+      <AlertDialogContent>
+        <AlertDialogHeader>
+          <AlertDialogTitle>바로가기</AlertDialogTitle>
+          <AlertDialogDescription>
+            현재 버전에서는 상세 페이지 이동 기능이 제공되지 않으며, 이 기능이
+            실제로 사용되는 대신 이번 버전에서는 목업으로 대체되어 알림 창이
+            표시됩니다.
+          </AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+          <AlertDialogCancel>취소</AlertDialogCancel>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
   );
 };
