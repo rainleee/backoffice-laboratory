@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 import "./globals.css";
-import { ApolloWrapper } from "./components/apollo-wrapper";
-import GNB from "./components/gnb";
-import { MswTrigger } from "./components/msw-trigger";
+import { ApolloWrapper, GNB, MswTrigger } from "./components";
 
 const inter = Inter({ subsets: ["latin"] });
 

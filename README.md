@@ -1,3 +1,14 @@
+## Overview
+해당 레포는 실제 구현했던 화면을 Mokcing 데이터로 구현한 화면으로, 실제 유저들의 개인정보를 포함하고 있지 않습니다. 자세한 후기는 [이곳](https://velog.io/@rainlee/%EB%B0%B1%EC%98%A4%ED%94%BC%EC%8A%A4-TFT-%ED%9B%84%EA%B8%B0-%EB%B0%8F-%ED%9A%8C%EA%B3%A0)에서 확인이 가능합니다.
+
+## 기능
+### 고객 특이 사항 초기화
+
+- 목표: 수동 작업 자동화
+- 성과: 500건을 기준으로 처리 시간이 83분에서 1분으로 단축되어 처리 속도 **98.8%** 향상
+
+___
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

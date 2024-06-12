@@ -141,9 +141,7 @@ const LinkAlertDialog = () => {
         <AlertDialogHeader>
           <AlertDialogTitle>바로가기</AlertDialogTitle>
           <AlertDialogDescription>
-            현재 버전에서는 상세 페이지 이동 기능이 제공되지 않으며, 이 기능이
-            실제로 사용되는 대신 이번 버전에서는 목업으로 대체되어 알림 창이
-            표시됩니다.
+            현재 버전에서는 상세 페이지 이동 기능이 제공되지 않습니다.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>

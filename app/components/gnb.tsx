@@ -2,15 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
 
-type GNBProps = {
-  children?: ReactNode;
-};
-
-const GNB = ({ children }: GNBProps) => {
+export const GNB = ({ children }: React.PropsWithChildren) => {
   const path = usePathname();
   const menuList = [
     { href: "/", name: "메인" },
@@ -42,5 +37,3 @@ const GNB = ({ children }: GNBProps) => {
     </main>
   );
 };
-
-export default GNB;
